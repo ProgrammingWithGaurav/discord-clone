@@ -1,3 +1,7 @@
+.app  {
+    display: flex;
+}
+
 .MuiSvgIcon-root  {
     cursor: pointer;
 }
