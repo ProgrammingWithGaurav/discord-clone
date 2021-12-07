@@ -8,6 +8,16 @@
 
 .chat-messages {
     flex: 1;
+    overflow: scroll;
+}
+
+.chat-messages::-webkit-scrollbar {
+    display: none;
+}
+
+.chat-messages {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .chat-input {

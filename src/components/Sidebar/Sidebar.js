@@ -25,14 +25,14 @@ function Sidebar() {
             setChannels(snapshot.docs.map(doc => ({
                 id: doc.id,
                 channel: doc.data(),
-            })))
-        ))
+            }))
+            )))
     }, [])
 
-    const handleAddChannel =  () => {
+    const handleAddChannel = () => {
         const channelName = prompt('Enter a channel name');
 
-        if(channelName) { 
+        if (channelName) {
             db.collection('channels').add({
                 channelName: channelName,
             })
@@ -56,7 +56,7 @@ function Sidebar() {
                 </div>
 
                 <div className="sidebar-channelList">
-                    {channels.map(({id, channel}) => (
+                    {channels.map(({ id, channel }) => (
                         <SidebarChannel key={id} id={id} channelName={channel.channelName} />
                     ))}
                 </div>
